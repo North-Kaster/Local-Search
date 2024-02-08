@@ -26,6 +26,10 @@ public abstract class SimulatedAnnealing<S> {
     public void search(){
         /* TODO */
         S state = problem.getInitState();
+        while (temp > 0) {
+            S newState = problem.generateNewState(state);
+            double deltaCost = problem.cost(newState) - problem.cost(state);
+        }
     }
 
     public boolean accept(double delta, double temp){
