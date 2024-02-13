@@ -22,6 +22,8 @@ public class SimulatedAnnealing_TSP extends SimulatedAnnealing<List<Integer>> {
 
     }
 
+    //TODO: Add method for calcFitnessScore for Individual.java to call
+
     public static void main(String[] args) {
         SimulatedAnnealing_TSP agent = new SimulatedAnnealing_TSP(new TSP(17));
         agent.search();
