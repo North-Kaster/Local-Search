@@ -17,11 +17,13 @@ public class SimulatedAnnealing_TSP extends SimulatedAnnealing<List<Integer>> {
     }
 
     public double schedule(long time, double temp){
-        /* TODO */
+        // generates the new temperature for each iteration
+        return temp * (1 - (double) time /MAX_TIME);
+
     }
 
     public static void main(String[] args) {
-        SimulatedAnnealing_TSP agent = new SimulatedAnnealing_TSP(new TSP(26));
+        SimulatedAnnealing_TSP agent = new SimulatedAnnealing_TSP(new TSP(17));
         agent.search();
 
     }

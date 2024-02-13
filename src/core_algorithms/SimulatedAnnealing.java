@@ -35,6 +35,8 @@ public abstract class SimulatedAnnealing<S> {
             time++;
             temp = schedule(time, temp);
         }
+        System.out.println("State: " + state);
+        System.out.println("Distance: " + problem.cost(state));
     }
 
     public boolean accept(double delta, double temp) {
